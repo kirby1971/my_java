@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.wm_phonegap_misc_zh");dojo.provide("dijit.form.nls.validate");dijit.form.nls.validate._built=true;dojo.provide("dijit.form.nls.validate.zh");dijit.form.nls.validate.zh={"rangeMessage":"此值超出范围。","invalidMessage":"输入的值无效。","missingMessage":"此值是必需值。"};

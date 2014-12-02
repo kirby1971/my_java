@@ -1,0 +1,18 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.myproddb.data.Countries" table="countries" catalog="myproddb" dynamic-insert="false" dynamic-update="false">
+        <id name="countryCode" type="string">
+            <column name="country_code" length="2"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="description" type="string">
+            <column name="description" length="50"/>
+        </property>
+        <property name="countryAlpha" type="string">
+            <column name="country_alpha" length="3"/>
+        </property>
+        <property name="countryNum" type="integer">
+            <column name="country_num"/>
+        </property>
+    </class>
+</hibernate-mapping>

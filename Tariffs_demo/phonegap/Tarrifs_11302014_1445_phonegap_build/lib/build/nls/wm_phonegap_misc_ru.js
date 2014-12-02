@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.wm_phonegap_misc_ru");dojo.provide("dijit.form.nls.validate");dijit.form.nls.validate._built=true;dojo.provide("dijit.form.nls.validate.ru");dijit.form.nls.validate.ru={"rangeMessage":"Это значение вне диапазона.","invalidMessage":"Указано недопустимое значение.","missingMessage":"Это обязательное значение."};

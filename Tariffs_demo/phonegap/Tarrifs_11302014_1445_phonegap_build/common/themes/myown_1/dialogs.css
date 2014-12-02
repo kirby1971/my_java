@@ -1,0 +1,51 @@
+/* GROUP: Dialog Frame */
+.myown_1 .wmdialog {
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px black;    
+}
+
+/* GROUP: Dialog Container */
+.myown_1 .wmdialog {
+    background-color: white;
+    background-image: none;
+    filter: none;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+/* GROUP: Dialog Titlebar */
+.myown_1 .dialogtitlebar .wmlabel{
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.myown_1 .dialogtitlebar {
+    background-color: #444444;
+    background-image: none;
+    filter: none;
+}
+
+
+/* GROUP: Titlebar Buttons: Close Button */
+.myown_1 .dialogtitlebar .dialogclosebutton {
+    background-image: url(images/DialogIconsGray.png);
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+}
+
+/* GROUP: Titlebar Buttons: Minify Button */
+.myown_1 .dialogtitlebar .dialogminifybutton {
+    background-image: url(images/DialogIconsGray.png);
+    background-position: -16px 0px;
+    background-repeat: no-repeat;
+}
+/* GROUP: Titlebar Buttons: Maxify Button */
+.myown_1 .dialogtitlebar .dialogmaxifybutton {
+    background-image: url(images/DialogIconsGray.png);
+    background-position: -32px 0px;
+    background-repeat: no-repeat;
+}

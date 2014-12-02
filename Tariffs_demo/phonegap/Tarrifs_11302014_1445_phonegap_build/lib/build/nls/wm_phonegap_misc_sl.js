@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.wm_phonegap_misc_sl");dojo.provide("dijit.form.nls.validate");dijit.form.nls.validate._built=true;dojo.provide("dijit.form.nls.validate.sl");dijit.form.nls.validate.sl={"rangeMessage":"Ta vrednost je izven območja.","invalidMessage":"Vnesena vrednost ni veljavna.","missingMessage":"Ta vrednost je zahtevana."};

@@ -1,0 +1,139 @@
+/* GROUP: Standard Tab Button */
+.myown_1 .wmtablayers .wmtablayers-tab,
+.myown_1 .wmtablayers button.wmtablayers-verticaltab {
+	font-family: sans-serif; 
+	color: #FFFFFF; 
+	font-weight: bold;
+    font-size: 12px;
+    background-color: red;
+    background-image: none;
+    filter: none;
+}
+.myown_1 .wmtablayers .wmtablayers-tab {
+
+    height: 12px; 
+    margin-left: 8px; 
+    border-top-left-radius: 8px; 
+    border-top-right-radius: 8px; 
+    box-shadow: -1px 1px 1px #444444; 
+
+    border-width: 1px 1px 0px 1px;
+    border-style: solid;
+	border-bottom-color: transparent;
+	border-top-color: #444444; 
+	border-left-color:#444444; 
+	border-right-color: #444444;
+}
+.dj_ff .myown_1 .wmtablayers .wmtablayers-tab {
+       box-shadow: 0 0 0 black !important; /* THEMER: HIDE */
+}
+/* GROUP: First Tab */
+.myown_1 .wmtablayers-tab:first-child {
+    margin-left: 0px; 
+}
+
+
+/* GROUP: Standard Selected Tab Button */
+.myown_1 .wmtablayers .wmtablayers-verticaltab.wmtablayers-selected,
+.myown_1 .wmtablayers .wmtablayers-verticaltab.wmtablayers-selected:hover,
+.myown_1 .wmtablayers .wmtablayers-tab.wmtablayers-selected,
+.myown_1 .wmtablayers .wmtablayers-tab.wmtablayers-selected:hover {
+    background-color: red;
+    background-image: none;
+    filter: none;
+}
+.myown_1 .wmtablayers .wmtablayers-tab.wmtablayers-selected,
+.myown_1 .wmtablayers .wmtablayers-tab.wmtablayers-selected:hover {
+    box-shadow: -1px 1px 1px #444444; 
+    top: 2px;
+    /* NOTE: To create different values of top for different browsers, use
+     .dj_ie .myown_1 .wmtablayers .wmtablayers-tab.wmtablayers-selected, 
+     .dj_ff .myown_1 .wmtablayers .wmtablayers-tab.wmtablayers-selected,
+     .dj_webkit .myown_1 .wmtablayers .wmtablayers-tab.wmtablayers-selected */
+}
+
+/* GROUP: Tab Button with Focus */
+.myown_1 .wmtablayers .wmtablayers-verticaltab:focus,
+.myown_1 .wmtablayers .wmtablayers-tab:focus {
+   outline-width: 0;
+}
+
+/* GROUP: Tab Button with Hover */
+.myown_1 .wmtablayers .wmtablayers-tab:hover,
+.myown_1 .wmtablayers .wmtablayers-verticaltab:hover {
+	color: #FFFFFF; 
+	background-color: #444444; 
+	background-image: none;
+        filter: none;
+}
+.myown_1 .wmtablayers .wmtablayers-tab:hover {
+    box-shadow: inherit;
+}
+
+/* GROUP: Tab Button with Mouse Down */
+/* NOTE: This does not appear to work in firefox at design time but is fine at runtime */
+.myown_1 .wmtablayers .wmtablayers-tab:active,
+.myown_1 .wmtablayers .wmtablayers-verticaltab:active,
+.myown_1 .wmtablayers .wmtablayers-tab:active:.focus,
+.myown_1 .wmtablayers .wmtablayers-verticaltab:active:focus {
+color: #FFFFFF; 
+background-color: #444444; 
+background-image: none;
+filter: none;
+}
+.myown_1 .wmtablayers .wmtablayers-tab:active,
+.myown_1 .wmtablayers .wmtablayers-tab:active:focus {
+    box-shadow: 0px 0px 0px #444444; 
+}
+
+
+/* GROUP: Layer Borders */
+.myown_1 .wmtablayers  .wmTabLayers-client > .wmlayer {
+    border-radius: 4px !important;
+}
+
+/* GROUP: Tab Bar */
+.myown_1 .wmtablayers div.wmtablayers-tabbar {
+   background: transparent;
+}
+
+
+
+/* GROUP: Vertical Tab Buttons */
+.myown_1 .wmtablayers button.wmtablayers-verticaltab {
+   font-size: 9; 
+    width: 95%;
+    margin-left: 5%;
+    margin-bottom: 5px;
+    border-bottom-left-radius: 4px; 
+    border-top-left-radius: 4px; 
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+	border-bottom-color: #444444;
+	border-top-color: #444444; 
+	border-left-color:#444444; 
+	border-right-color: transparent;
+    box-shadow: -1px 1px 1px #444444; 
+}
+
+/* GROUP: First Vertical Tab */
+.myown_1 .wmtablayers .wmtablayers-verticaltab:first-child {
+    margin-top: 8px;
+}
+
+/* GROUP: Vertical Tab Buttons with Hover */
+.myown_1 .wmtablayers .wmtablayers-verticaltab:hover {
+    box-shadow: inherit;
+}
+
+/* GROUP: Vertical Selected Tab Buttons */
+.myown_1 .wmtablayers .wmtablayers-verticaltab.wmtablayers-selected {
+    box-shadow: inherit;
+/*  border: solid 1px black; // THEMER: DISABLED */
+}
+
+/* GROUP: Vertical Tab with Mouse Down */
+.myown_1 .wmtablayers .wmtablayers-verticaltab:active,
+.myown_1 .wmtablayers .wmtablayers-verticaltab:active:focus {
+    box-shadow: 0px 0px 0px #444444; 
+}

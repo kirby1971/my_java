@@ -1,0 +1,76 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.myproddb.data.Events" table="events" catalog="myproddb" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.myproddb.data.EventsId">
+            <key-property name="bookingId" type="string">
+                <column name="Booking_id" length="50"/>
+            </key-property>
+            <key-property name="accountId" type="string">
+                <column name="account_id" length="50"/>
+            </key-property>
+            <key-property name="packageId" type="string">
+                <column name="package_id" length="50"/>
+            </key-property>
+            <key-property name="eventCode" type="string">
+                <column name="event_code" length="50"/>
+            </key-property>
+            <key-property name="eventActualDate" type="date">
+                <column name="event_actual_date" length="10"/>
+            </key-property>
+        </composite-id>
+        <property name="eventType" type="string">
+            <column name="event_type" length="50" not-null="true"/>
+        </property>
+        <property name="eventActualTime" type="time">
+            <column name="event_actual_time" length="8"/>
+        </property>
+        <property name="eventLocationType" type="string">
+            <column name="event_location_type"/>
+        </property>
+        <property name="eventLocation" type="string">
+            <column name="event_location"/>
+        </property>
+        <property name="eventCountry" type="string">
+            <column name="event_country"/>
+        </property>
+        <property name="eventReference" type="string">
+            <column name="event_reference"/>
+        </property>
+        <property name="eventReason" type="string">
+            <column name="event_reason"/>
+        </property>
+        <property name="eventText" type="string">
+            <column name="event_text"/>
+        </property>
+        <property name="eventExpectedDate" type="date">
+            <column name="event_expected_date" length="10"/>
+        </property>
+        <property name="eventExpectedTime" type="time">
+            <column name="event_expected_time" length="8"/>
+        </property>
+        <property name="eventCreationType" type="string">
+            <column name="event_creation_type"/>
+        </property>
+        <property name="creationDateTimeStamp" type="timestamp">
+            <column name="creation_date_time_stamp" length="19"/>
+        </property>
+        <property name="deliveredTo" type="string">
+            <column name="delivered_to"/>
+        </property>
+        <property name="dispatchNbr" type="string">
+            <column name="dispatch_nbr"/>
+        </property>
+        <property name="problemSource" type="string">
+            <column name="problem_source"/>
+        </property>
+        <property name="retentionCode" type="string">
+            <column name="retention_code"/>
+        </property>
+        <property name="transportMode" type="string">
+            <column name="transport_mode"/>
+        </property>
+        <property name="lastEvent" type="string">
+            <column name="last_event" length="1"/>
+        </property>
+    </class>
+</hibernate-mapping>

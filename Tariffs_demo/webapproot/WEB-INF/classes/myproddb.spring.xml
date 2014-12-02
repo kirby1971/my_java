@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+
+<!-- Generated 11/30/2014 14:44:59
+
+Configuration for 'myproddb' database service
+
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+
+    <bean 
+        id="myproddb"
+        class="com.myproddb.Myproddb"
+        scope="singleton"
+        lazy-init="true">
+        <property name="dataServiceManager">
+            <ref bean="myproddbDataService"/>
+        </property>
+        <property name="taskManager">
+            <ref bean="myproddbTaskMgr"/>
+        </property>
+    </bean>
+
+
+    <bean 
+        class="com.wavemaker.runtime.data.spring.WMPropertyPlaceholderConfigurer">
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+        <property name="locations">
+            <list>
+                <value>classpath:myproddb.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean 
+        id="myproddbDataSource"
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource" 
+        lazy-init="true">
+        <property name="driverClassName" value="${myproddb.driverClassName}"/>
+        <property name="url" value="${myproddb.connectionUrl}"/>
+        <property name="username" value="${myproddb.username}"/>
+        <property name="password" value="${myproddb.password}"/>
+    </bean>
+
+
+    <bean 
+        id="myproddbTxMgr" 
+        class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+        lazy-init="true">
+        <property name="sessionFactory">
+            <ref bean="myproddbSessionFactory"/>
+        </property>
+    </bean>
+
+
+    <bean 
+        id="myproddbHibernateTemplate"
+        class="org.springframework.orm.hibernate3.HibernateTemplate"
+        lazy-init="true">
+        <property name="sessionFactory"> 
+            <ref bean="myproddbSessionFactory"/>
+        </property>
+    </bean>  
+
+
+    <bean 
+        id="myproddbSessionFactory" 
+        class="com.wavemaker.runtime.data.spring.ConfigurationAndSessionFactoryBean"
+        lazy-init="true">
+
+        <!-- A unique name for this SessionFactory's configuration -->
+        <property name="name" value="myproddb"/>
+        <property name="dataSource" ref="myproddbDataSource"/>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${myproddb.dialect}</prop>
+                <prop key="hibernate.transaction.factory_class">
+                    org.hibernate.transaction.JDBCTransactionFactory
+                </prop>
+                <prop key="hibernate.current_session_context_class">thread</prop>
+                
+            </props> 
+        </property>
+
+        <property name="mappingResources">
+            <list>
+
+<value>com/myproddb/data/Details.hbm.xml</value>
+<value>com/myproddb/data/PortCodes.hbm.xml</value>
+<value>com/myproddb/data/UserTariffs.hbm.xml</value>
+<value>com/myproddb/data/Countries.hbm.xml</value>
+<value>com/myproddb/data/HandlingCodes.hbm.xml</value>
+<value>com/myproddb/data/ContainerTypes.hbm.xml</value>
+<value>com/myproddb/data/Booking.hbm.xml</value>
+<value>com/myproddb/data/References.hbm.xml</value>
+<value>com/myproddb/data/Locations.hbm.xml</value>
+<value>com/myproddb/data/Events.hbm.xml</value>
+<value>com/myproddb/data/Parties.hbm.xml</value>
+<value>com/myproddb/data/BookingLinks.hbm.xml</value>
+
+<value>com/myproddb/data/PortCodes.ql.xml</value>
+<value>com/myproddb/data/app-queries.ql.xml</value>
+
+            </list>
+        </property>
+
+    </bean>
+
+
+    <!-- the data service bean instance is injected into the service bean -->
+    <bean 
+        id="myproddbDataService" 
+        class="com.wavemaker.runtime.data.spring.SpringDataServiceManager"
+        lazy-init="true">
+        <constructor-arg>
+            <!-- the value of the "name" property of the SessionFactory -->
+            <value>myproddb</value>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="myproddbHibernateTemplate"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="myproddbTxMgr"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="myproddbTaskMgr"/>
+        </constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="useIndividualCRUDOperations" value="false"/>
+                <entry key="refreshEntities" value=""/> 
+            </map>
+        </constructor-arg>
+    </bean>
+
+
+    <bean 
+        id="myproddbTaskMgr"
+        class="com.wavemaker.runtime.data.DefaultTaskManager"
+        lazy-init="true"/>
+
+    <bean class="com.wavemaker.runtime.service.events.EventWire"
+        lazy-init="false">
+        <property name="serviceWire" ref="myproddbServiceWire"/>
+        <property name="eventListener">
+            <bean class="com.wavemaker.runtime.data.DataServiceEventListener"/>
+        </property>
+    </bean>
+
+    <bean id="myproddbServiceWire"
+        class="com.wavemaker.runtime.service.reflect.ReflectServiceWire"
+        lazy-init="false" scope="singleton">
+        <property name="serviceId" value="myproddb"/>
+        <property name="serviceType" ref="DataService"/>
+    </bean>
+
+</beans>

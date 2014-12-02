@@ -1,0 +1,13 @@
+{
+	"methods": [{
+		"name": "getPortCodesById",
+		"operationType": "hqlquery",
+		"parameters": [{
+			"name": "id",
+			"type": "java.lang.String"
+		}],
+		"returnType": "com.myproddb.data.PortCodes"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "myproddb.json"
+}

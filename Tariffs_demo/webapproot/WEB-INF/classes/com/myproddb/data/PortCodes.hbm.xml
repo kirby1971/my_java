@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.myproddb.data.PortCodes" table="port_codes" catalog="myproddb" dynamic-insert="false" dynamic-update="false">
+        <id name="portCode" type="string">
+            <column name="port_code" length="3"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="portName" type="string">
+            <column name="port_name" length="50"/>
+        </property>
+        <property name="portCountry" type="string">
+            <column name="port_country" length="2"/>
+        </property>
+        <property name="loCode" type="string">
+            <column name="lo_code" length="5"/>
+        </property>
+        <set name="usertariffss" inverse="true" cascade="">
+            <key>
+                <column name="port_of_loading2" not-null="true"/>
+            </key>
+            <one-to-many class="com.myproddb.data.UserTariffs"/>
+        </set>
+    </class>
+</hibernate-mapping>

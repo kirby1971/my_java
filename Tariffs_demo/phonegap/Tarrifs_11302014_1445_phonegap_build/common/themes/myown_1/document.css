@@ -1,0 +1,24 @@
+/* GROUP: Main Document Styles */
+.myown_1  .wmapproot {
+   font-family: sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.myown_1 .wmapproot > .wmpagecontainer,
+.myown_1.wmapproot > .wmpagecontainer,
+.myown_1 #studio_designer > .wmlayout {
+    border-radius: 4px;
+    box-shadow: 4px 4px 4px black;
+    background-color: #444444; /* Document-Styles-Background_Color */
+    background-image: none;
+    filter: none;
+}
+
+/* IE9 has buggy display when combinding both gradients and radius.
+ * Gradients and not radius work on IE8, so we'll just do it the IE 8 way */
+.dj_ie9 .myown_1 div,
+.dj_ie9 .myown_1 input,
+.dj_ie9 .myown_1 button {
+   border-radius: 0px !important; /* THEMER: HIDE */
+}

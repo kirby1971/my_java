@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.myproddb.data.References" table="references" catalog="myproddb" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.myproddb.data.ReferencesId">
+            <key-property name="bookingId" type="string">
+                <column name="Booking_id" length="50"/>
+            </key-property>
+            <key-property name="accountId" type="string">
+                <column name="account_id" length="50"/>
+            </key-property>
+            <key-property name="referenceType" type="string">
+                <column name="reference_type" length="50"/>
+            </key-property>
+            <key-property name="lineNumber" type="float">
+                <column name="line_number" precision="6"/>
+            </key-property>
+        </composite-id>
+        <property name="reference" type="string">
+            <column name="reference" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

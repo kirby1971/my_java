@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<beans xsi:schemaLocation="http://schema.cloudfoundry.org/spring http://schema.cloudfoundry.org/spring/cloudfoundry-spring-0.8.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd" xmlns="http://www.springframework.org/schema/beans" xmlns:cloud="http://schema.cloudfoundry.org/spring" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <bean class="com.wavemaker.runtime.service.TypeManager" parent="typeManagerBase" scope="singleton" id="typeManager">
+        <property name="types">
+            <map merge="true">
+                <entry key="myappdb">
+                    <list>
+                        <value>com.myappdb.data.Membership</value>
+                        <value>com.myappdb.data.Roles</value>
+                        <value>com.myappdb.data.Users</value>
+                        <value>com.myappdb.data.MembershipId</value>
+                    </list>
+                </entry>
+                <entry key="myproddb">
+                    <list>
+                        <value>com.myproddb.data.Booking</value>
+                        <value>com.myproddb.data.BookingLinks</value>
+                        <value>com.myproddb.data.ContainerTypes</value>
+                        <value>com.myproddb.data.Countries</value>
+                        <value>com.myproddb.data.Details</value>
+                        <value>com.myproddb.data.Events</value>
+                        <value>com.myproddb.data.HandlingCodes</value>
+                        <value>com.myproddb.data.Locations</value>
+                        <value>com.myproddb.data.Parties</value>
+                        <value>com.myproddb.data.PortCodes</value>
+                        <value>com.myproddb.data.References</value>
+                        <value>com.myproddb.data.UserTariffs</value>
+                        <value>com.myproddb.data.EventsId</value>
+                        <value>com.myproddb.data.ReferencesId</value>
+                        <value>com.myproddb.data.UserTariffsId</value>
+                        <value>com.myproddb.data.BookingId</value>
+                        <value>com.myproddb.data.PartiesId</value>
+                        <value>com.myproddb.data.BookingLinksId</value>
+                        <value>com.myproddb.data.DetailsId</value>
+                    </list>
+                </entry>
+                <entry key="securityService">
+                    <list/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+</beans>

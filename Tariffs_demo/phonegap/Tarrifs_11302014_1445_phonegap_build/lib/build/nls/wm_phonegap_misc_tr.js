@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.wm_phonegap_misc_tr");dojo.provide("dijit.form.nls.validate");dijit.form.nls.validate._built=true;dojo.provide("dijit.form.nls.validate.tr");dijit.form.nls.validate.tr={"rangeMessage":"Bu değer aralık dışında.","invalidMessage":"Girilen değer geçersiz.","missingMessage":"Bu değer gerekli."};

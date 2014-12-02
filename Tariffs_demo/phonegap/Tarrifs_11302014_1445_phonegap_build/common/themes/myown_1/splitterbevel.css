@@ -1,0 +1,25 @@
+/* GROUP: Bevel */
+.myown_1 .wmbevel {
+    background-color: #444444;
+}
+
+/* GROUP: Splitter */
+/* NOTE: If you use gradients, then you can't use the horizontal and vertical images (which is important) */
+.myown_1 div.wmsplitter-h,
+.myown_1 div.wmsplitter-v {
+    background-color: #444444; /* THEMER: NO BACKGROUND IMAGE */    
+}
+/* GROUP: Splitter Hover */
+.myown_1 div.wmsplitter-h:hover,
+.myown_1 div.wmsplitter-v:hover {
+    background-color: #444444; /* THEMER: NO BACKGROUND IMAGE */    
+}
+/* GROUP: Splitter Horizontal Image */
+.myown_1 .wmsplitter-h {
+	background: url(images/splitter_bg_h.png) no-repeat 50% 50%;
+}
+
+/* GROUP: Splitter Vertical Image */
+.myown_1 .wmsplitter-v {
+	background: url(images/splitter_bg_v.png) no-repeat 50% 50%;
+}

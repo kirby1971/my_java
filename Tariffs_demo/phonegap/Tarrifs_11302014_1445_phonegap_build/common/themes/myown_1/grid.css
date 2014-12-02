@@ -1,0 +1,184 @@
+/* GROUP: Grid Rows */
+.myown_1 .GridListStyle div.dojoxGrid, 
+.myown_1 .GridListStyle .wmlist {
+    font-size: 12px;
+}
+
+.myown_1 .GridListStyle  .wmlist-cell,
+.myown_1 .GridListStyle td.dojoxGridCell {
+    border-left-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-right-width: 1px;
+    border-style: solid;
+    border-color: #999999;
+}
+
+.myown_1 .GridListStyle div.dojoxGridRow,
+.myown_1 .GridListStyle.Disabled div.dojoxGridRow.dojoxGridRowOver,
+.myown_1 .GridListStyle.Disabled div.dojoxGridRow.dojoxGridRowOver td.dojoxGridCell,
+.myown_1 .GridListStyle div.wmlist-item,
+.myown_1 .GridListStyle.Disabled div.wmlist-item.wmlist-item-over  {
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+.myown_1 .GridListStyle div.dojoxGridContent .dojoxGridCell {
+   background-color: transparent; /* THEMER: HIDE */
+}
+
+.myown_1 .GridListStyle div.dojoxGridContent .dojoxGridCellFocus,
+.myown_1 .GridListStyle div.dojoxGridContent .dojoxGrid-cell-focus {
+   border: 1px dashed transparent !important; /* THEMER: HIDE */
+}
+
+
+/* GROUP: Odd Numbered Rows */
+.myown_1 .GridListStyle div.dojoxGridRow,
+.myown_1 .GridListStyle div.wmlist-item,
+
+/* Disabled grid rows */
+.myown_1 .GridListStyle.Disabled div.dojoxGridRow.dojoxGridRowOver,
+.myown_1 .GridListStyle.Disabled div.dojoxGridRow.dojoxGridRowSelected,
+.myown_1 .GridListStyle.Disabled .dojoxGridRowOver td.dojoxGridCell,
+.myown_1 .GridListStyle.Disabled div.wmlist-item.wmlist-item-over,
+.myown_1 .GridListStyle.Disabled div.wmlist-item.wmlist-item-selected,
+
+/* Disabled odd    rows */
+.myown_1 .GridListStyle.Disabled div.dojoxGridRow.dojoxGridRowOdd.dojoxGridRowOver,
+.myown_1 .GridListStyle.Disabled div.dojoxGridRow.dojoxGridRowOdd.dojoxGridRowSelected,
+.myown_1 .GridListStyle.Disabled div.wmlist-item.Odd.wmlist-item-over,
+.myown_1 .GridListStyle.Disabled div.wmlist-item.Odd.wmlist-item-selected   {
+    color: #000000;
+    background-color: #aaaaaa;
+}
+
+
+/* GROUP: Even Numbered Rows */
+.myown_1 .GridListStyle div.dojoxGrid-row.dojoxGrid-row-odd,
+.myown_1 .GridListStyle div.dojoxGridRow.dojoxGridRowOdd,
+.myown_1 .GridListStyle.Disabled div.dojoxGridRow.dojoxGridRowOdd.dojoxGridRowOver,
+.myown_1 .GridListStyle.Disabled div.dojoxGridRow.dojoxGridRowOdd.dojoxGridRowSelected,
+.myown_1 .GridListStyle.Disabled div.dojoxGridRow.dojoxGridRowOdd.dojoxGridRowOver td.dojoxGridCell,
+.myown_1 .GridListStyle.Disabled div.wmlist-item.Odd.wmlist-item-over,
+.myown_1 .GridListStyle.Disabled div.wmlist-item.Odd.wmlist-item-selected,
+.myown_1 .GridListStyle .wmlist-item.Odd {
+    color: #1e1c1c;
+    background-color: #cccccc;
+}
+
+/* GROUP: Selected Row */
+.myown_1 .GridListStyle .dojoxGridRow.dojoxGridRowSelected,
+.myown_1 .GridListStyle.Disabled .dojoxGridRow.dojoxGridRowSelected,
+.myown_1 .GridListStyle .dojoxGridRow.dojoxGridRowSelected td.dojoxGridCell,
+.myown_1 .GridListStyle .dojoxGridRow.dojoxGridRowOdd.dojoxGridRowSelected,
+.myown_1 .GridListStyle .dojoxGridRow.dojoxGridRowOver.dojoxGridRowSelected,
+.myown_1 .GridListStyle .dojoxGridRow.dojoxGridRowOdd.dojoxGridRowOver.dojoxGridRowSelected,
+.myown_1 .GridListStyle .wmlist-item.wmlist-item-selected,
+.myown_1 .GridListStyle.Disabled .wmlist-item.wmlist-item-selected,
+.myown_1 .GridListStyle .wmlist-item.wmlist-item-selected.wmlist-item-over {
+   background-color: #333333;
+   color: #FFFFFF;
+}
+
+/* GROUP: Selected Cell */
+.myown_1 .dojoxGridCellFocus {
+	   outline: solid 0px #ae0909;
+    outline-offset: -1px; /* Change this to match outline width (but negative). Not supported by IE */ /* THEMER: HIDE */
+}
+
+/* GROUP: Hover row */
+.myown_1 .GridListStyle .wmlist-item.wmlist-item-over,
+.myown_1 .GridListStyle .dojoxGridRow.dojoxGridRowOver,
+.myown_1 .GridListStyle .dojoxGridRow.dojoxGridRowOdd.dojoxGridRowOver,
+.myown_1 .GridListStyle .dojoxGridRowOver a,
+.myown_1 .GridListStyle .dojoxGridRowOver td.dojoxGridCell {
+   background-color: #999999;
+   color: #000000;
+}
+
+/* GROUP: Grid Header */
+.myown_1 .GridListStyle .wmlist-header th,
+.myown_1 .GridListStyle.wmNoFontSize div.dojoxGridHeader .dojoxGridCell {
+      font-size: 14px;
+}
+
+.myown_1 .GridListStyle .wmlist-header .wmlist-cell,
+.myown_1 .GridListStyle div.dojoxGridHeader .dojoxGridCell {
+    border-top: solid 0px rgb(251, 251, 251);
+    border-right: solid 1px rgb(170, 170, 170);
+    border-bottom: solid 0px rgb(251, 251, 251);
+    border-left: solid 0px rgb(251, 251, 251);
+}
+
+
+
+.myown_1 .GridListStyle .wmlist-header,
+.myown_1 .GridListStyle div.dojoxGridHeader {
+  background-color: #575050;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(#bcbcc3), color-stop(51%,#262728), to(#262728));
+  background-image: -moz-linear-gradient(top, #bcbcc3 0%,#262728 51%,#262728 100%);
+  background-image: -o-linear-gradient(top, #bcbcc3 0%,#262728 51%,#262728 100%);
+  background-image: -ms-linear-gradient(top, #bcbcc3 0%,#262728 51%,#262728 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bcbcc3', endColorstr='#262728',GradientType=0);
+  border-bottom: solid 1px #666666;
+}
+.myown_1 .GridListStyle .wmlist-header th,
+.myown_1 .GridListStyle div.dojoxGridHeader th.dojoxGridCell,
+.myown_1 .GridListStyle div.dojoxGridHeader th.dojoxGridCell.dojoxGridCellOver {	
+  background: transparent none !important; /* THEMER: HIDE */
+
+  font-family: sans-serif;
+  color: #e6e6e6;
+  font-weight: bold;
+}
+
+/* GROUP: Grid Cells */
+.myown_1 .GridListStyle .dojoxGridCell,
+.myown_1 .GridListStyle .wmlist-cell {
+    padding: 4px 8px;
+}
+
+/* GROUP: Focused Cell */
+.myown_1 .GridListStyle .dojoxGridCellFocus {
+/*   outline: solid 1px #5b9dd7; // THEMER: DISABLED */
+}
+
+
+/* THEMER: DO NOT SUBCLASS START */
+/* GROUP: Mobile List */
+.myown_1 .MobileListStyle div.wmlist-item,
+.myown_1 .Disabled.MobileListStyle div.wmlist-item,
+.myown_1 .Disabled.MobileListStyle div.wmlist-item.wmlist-item-over {
+   border-radius: 4px;
+   margin: 5px;
+   background-color: #b52727;
+   background-image: none;
+   filter: none;
+   color: #000000;
+   font-family: sans-serif;
+   min-height: 24px;
+}
+
+.myown_1 .wmlist.MobileListStyle td.wmlist-cell {
+    border-style: solid;
+    border-color: #AAAAAA;
+    border-width: 0px;
+}
+
+/* GROUP: Mobile List Hover (Desktop only!) */
+.myown_1 .MobileListStyle div.wmlist-item.wmlist-item-over,
+.myown_1 .MobileListStyle div.wmlist-item.Odd.wmlist-item-over {
+		background-color: #555555;
+		color: #FFFFFF;
+}
+
+/* GROUP: Mobile List Selected Row */
+.myown_1 .MobileListStyle div.wmlist-item.wmlist-item-selected,
+.myown_1 .MobileListStyle div.wmlist-item.Odd.wmlist-item-selected,
+.myown_1 .MobileListStyle div.wmlist-item.wmlist-item-selected.wmlist-item-over,
+.myown_1 .MobileListStyle div.wmlist-item.Odd.wmlist-item-selected.wmlist-item-over {
+		background-color: #333333; 
+		color: #FFFFFF; 
+}
+/* THEMER: DO NOT SUBCLASS END */

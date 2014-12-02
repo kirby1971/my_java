@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="myproddb" class="com.myproddb.Myproddb" CRUDService="true" type="DataService" springFile="myproddb.spring.xml">
+    <operation operationType="hqlquery" name="getPortCodesById">
+        <parameter name="id" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.myproddb.data.PortCodes" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="com.myproddb.data.Booking" supportsQuickData="true">
+            <element name="id" typeRef="com.myproddb.data.BookingId" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="locationFrom" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="locationTo" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="countryFrom" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="countryTo" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="productCode" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="serviceCode1" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="quantity" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="packageType" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="goodsDesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="grossWeight" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="netWeight" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="weightUnit" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="volume" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="volumeUnit" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="loadMeter" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="masterBookingId" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="bookingType" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="orderType" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deliveryTerm" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deliveryTermPlace" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="invoiceAmount" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="invoiceNbr" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="invoiceCurrency" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="natureOfCargo" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="codAmount" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="codCurrency" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="codAccount" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="bookingText" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pickupDate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="pickupTime" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="pickupTimeTo" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="pickupTimeZone" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deliveryDate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="deliveryTime" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="deliveryTimeTo" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="deliveryTimeZone" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="orderDate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="orderTime" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="orderTimeZone" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="statisticalValue" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="creationDate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="creationTime" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="creationTimeZone" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="orderEntryDepot" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="servingDepot" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="handlingCode" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fclLcl" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.BookingLinks" supportsQuickData="true">
+            <element name="id" typeRef="com.myproddb.data.BookingLinksId" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.ContainerTypes" supportsQuickData="true">
+            <element name="containerType" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="insideLength" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="insideWidth" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="insideHeight" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="doorWidth" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="doorHeight" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="capacity" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="tareWeight" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="maxCargoWeight" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="usertariffss" typeRef="com.myproddb.data.UserTariffs" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.Countries" supportsQuickData="true">
+            <element name="countryCode" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="countryAlpha" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="countryNum" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.Details" supportsQuickData="true">
+            <element name="id" typeRef="com.myproddb.data.DetailsId" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="quantity" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="packageType" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="goodsDesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="marksNumbers" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="grossWeight" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="netWeight" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="weightUnit" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="volume" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="volumeUnit" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.Events" supportsQuickData="true">
+            <element name="id" typeRef="com.myproddb.data.EventsId" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="eventType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="eventActualTime" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="eventLocationType" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="eventLocation" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="eventCountry" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="eventReference" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="eventReason" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="eventText" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="eventExpectedDate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="eventExpectedTime" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="eventCreationType" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="creationDateTimeStamp" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="deliveredTo" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dispatchNbr" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="problemSource" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="retentionCode" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="transportMode" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lastEvent" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.HandlingCodes" supportsQuickData="true">
+            <element name="handlingCode" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="handlingType" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.Locations" supportsQuickData="true">
+            <element name="code" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="subDivision" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="status" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="date" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="iata" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="coordinates" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="usertariffss" typeRef="com.myproddb.data.UserTariffs" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.Parties" supportsQuickData="true">
+            <element name="id" typeRef="com.myproddb.data.PartiesId" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="addressName" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addressName2" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addressAddress" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addressAddress2" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addressAddress3" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addressCity" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addressPostalCode" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addressCountryCode" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addressForeignAccountNumber" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addressContactPerson" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addressState" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addressPhone" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addressEmailAddress" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addressReference" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.PortCodes" supportsQuickData="true">
+            <element name="portCode" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="portName" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="portCountry" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="loCode" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="usertariffss" typeRef="com.myproddb.data.UserTariffs" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.References" supportsQuickData="true">
+            <element name="id" typeRef="com.myproddb.data.ReferencesId" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="reference" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.UserTariffs" supportsQuickData="true">
+            <element name="id" typeRef="com.myproddb.data.UserTariffsId" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="portOfLoading" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="freightRateWm" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="volume" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="expectedPallets" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="exchangeRate" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="deliveryLocationNl" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="oceanfreightAmount" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="cfsChargesDest" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="delOrderFee" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="customsValue" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="transportDestCosts" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="dieselSurcharge" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="handlingFeeLcl" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="fclLcl" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="containerType" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="distance" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="range" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="deltaEuromax" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="thcChargesCarrier" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="isps" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="deliveryOrderFee" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="containertransportToDestination" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="deltaEuromaxSurcharge" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="allInHandlingFee" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="status" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="rel_port_of_loading" typeRef="com.myproddb.data.PortCodes" isList="false" allowNull="false"/>
+            <element name="rel_container_type" typeRef="com.myproddb.data.ContainerTypes" isList="false" allowNull="false"/>
+            <element name="rel_delivery_location_nl" typeRef="com.myproddb.data.Locations" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.EventsId" name="id" supportsQuickData="false">
+            <element name="bookingId" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="accountId" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="packageId" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="eventCode" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="eventActualDate" typeRef="java.util.Date" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.ReferencesId" name="id" supportsQuickData="false">
+            <element name="bookingId" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="accountId" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="referenceType" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="lineNumber" typeRef="java.lang.Float" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.UserTariffsId" name="id" supportsQuickData="false">
+            <element name="userId" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="tariffSeq" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="dataTime" typeRef="java.util.Date" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.BookingId" name="id" supportsQuickData="false">
+            <element name="bookingId" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="accountId" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.PartiesId" name="id" supportsQuickData="false">
+            <element name="bookingId" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="accountId" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="partyType" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.BookingLinksId" name="id" supportsQuickData="false">
+            <element name="userId" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="tariffSeq" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="dataTime" typeRef="java.util.Date" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="portOfLoading" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+        <dataobject javaType="com.myproddb.data.DetailsId" name="id" supportsQuickData="false">
+            <element name="bookingId" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="accountId" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="lineNumber" typeRef="java.lang.Float" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+    </dataobjects>
+</service>

@@ -1,0 +1,111 @@
+/* GROUP: Toast Dialog */
+html.WMApp .myown_1 div.wmtoast.wmtoastExtraSpecific {
+    background-color: rgb(40,40,40);
+    background-image: none;
+    filter: none;
+
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+     -webkit-box-shadow: 3px 4px 4px #222;
+     box-shadow: 3px 4px 4px #222;
+}
+.myown_1 .wmtoast .wmtoastmessage {
+    font-family: sans-serif;
+    font-size: 1Em;
+    color: black;
+    font-weight: bold;
+}
+
+/* GROUP: Success Styling */
+html.WMApp .myown_1 div.wmtoast.Success.wmtoastExtraSpecific {
+    background-color: #ffffff;
+    background-image: none;
+    filter: none;
+}
+.myown_1 .wmtoast .wmtoasttitle,
+.myown_1 .wmtoast.Success .wmtoastmessage {
+    color: black;
+}
+
+
+/* GROUP: Success Graphic */
+.myown_1 .wmtoast.Success .ToastLeft {
+   background-image: url(images/OK.png);
+}
+
+/* GROUP: Warning Styling */
+html.WMApp .myown_1 div.wmtoast.Warning.wmtoastExtraSpecific {
+    background-color: #ffffff;
+    background-image: none;
+    filter: none;
+}
+.myown_1 .wmtoast .wmtoasttitle,
+.myown_1 .wmtoast.Warning .wmtoastmessage {
+    color: black;
+}
+
+/* GROUP: Warning Graphic */
+.myown_1 .wmtoast.Warning .ToastLeft {
+   background-image: url(images/Caution.png);
+}
+
+/* GROUP: Error Styling */
+html.WMApp .myown_1 div.wmtoast.Error.wmtoastExtraSpecific {
+    background-color: #ffffff;
+    background-image: none;
+    filter: none;
+}
+.myown_1 .wmtoast .wmtoasttitle,
+.myown_1 .wmtoast.Error .wmtoastmessage {
+    color: black;
+}
+
+/* GROUP: Error Graphic */
+.myown_1 .wmtoast.Error .ToastLeft {
+   background-image: url(images/Close.png);
+}
+
+/* GROUP: Info Styling */
+html.WMApp .myown_1 div.wmtoast.Info.wmtoastExtraSpecific {
+    background-color: #ffffff;
+    background-image: none;
+    filter: none;
+}
+.myown_1 .wmtoast .wmtoasttitle,
+.myown_1 .wmtoast.Info .wmtoastmessage {
+    color: black;
+}
+
+/* GROUP: Info Graphic */
+.myown_1 .wmtoast.Info .ToastLeft {
+   background-image: url(images/Help\ Circle.png);
+}
+
+/* GROUP: Title */
+.myown_1 .wmtoast .wmtoasttitle {
+    font-family: sans-serif;
+    font-size: 1.2Em;
+    color: black;
+    font-weight: bold;
+}
+
+/* GROUP: Opacity */
+.wmtoastExtraSpecific.fadeInAnim {
+      -webkit-animation-name: toastFadeInKeyFrames; /* THEMER: HIDE */
+      -moz-animation-name: toastFadeInKeyFrames; /* THEMER: HIDE */
+      animation-name: toastFadeInKeyFrames; /* THEMER: HIDE */
+}
+
+@keyframes toastFadeInKeyFrames {
+   0% {
+       opacity: 0; /* THEMER: HIDE */
+   }
+   100% {
+       opacity: 0.9;
+   }
+ }
+
+/* GROUP: Opacity again */
+html.WMApp .myown_1 div.wmtoast.wmtoastExtraSpecific {
+opacity: 0.9;
+}

@@ -1,0 +1,13 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.myappdb.data.Membership" table="membership" catalog="myappdb" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.myappdb.data.MembershipId">
+            <key-property name="userId" type="string">
+                <column name="user_id" length="25"/>
+            </key-property>
+            <key-property name="role" type="string">
+                <column name="role" length="25"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

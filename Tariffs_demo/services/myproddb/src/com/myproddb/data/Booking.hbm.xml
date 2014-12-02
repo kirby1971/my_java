@@ -1,0 +1,154 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.myproddb.data.Booking" table="booking" catalog="myproddb" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.myproddb.data.BookingId">
+            <key-property name="bookingId" type="string">
+                <column name="booking_id" length="50"/>
+            </key-property>
+            <key-property name="accountId" type="string">
+                <column name="account_id" length="50"/>
+            </key-property>
+        </composite-id>
+        <property name="locationFrom" type="string">
+            <column name="location_from"/>
+        </property>
+        <property name="locationTo" type="string">
+            <column name="location_to"/>
+        </property>
+        <property name="countryFrom" type="string">
+            <column name="country_from"/>
+        </property>
+        <property name="countryTo" type="string">
+            <column name="country_to"/>
+        </property>
+        <property name="productCode" type="string">
+            <column name="product_code"/>
+        </property>
+        <property name="serviceCode1" type="string">
+            <column name="service_code1"/>
+        </property>
+        <property name="quantity" type="float">
+            <column name="quantity" precision="6"/>
+        </property>
+        <property name="packageType" type="string">
+            <column name="package_type"/>
+        </property>
+        <property name="goodsDesc" type="string">
+            <column name="goods_desc"/>
+        </property>
+        <property name="grossWeight" type="float">
+            <column name="gross_weight" precision="15"/>
+        </property>
+        <property name="netWeight" type="float">
+            <column name="net_weight" precision="15"/>
+        </property>
+        <property name="weightUnit" type="string">
+            <column name="weight_unit" length="3"/>
+        </property>
+        <property name="volume" type="float">
+            <column name="volume" precision="15"/>
+        </property>
+        <property name="volumeUnit" type="string">
+            <column name="volume_unit" length="3"/>
+        </property>
+        <property name="loadMeter" type="float">
+            <column name="load_meter" precision="15"/>
+        </property>
+        <property name="masterBookingId" type="string">
+            <column name="master_Booking_id"/>
+        </property>
+        <property name="bookingType" type="string">
+            <column name="booking_type"/>
+        </property>
+        <property name="orderType" type="string">
+            <column name="order_type"/>
+        </property>
+        <property name="deliveryTerm" type="string">
+            <column name="delivery_term"/>
+        </property>
+        <property name="deliveryTermPlace" type="string">
+            <column name="delivery_term_place"/>
+        </property>
+        <property name="invoiceAmount" type="float">
+            <column name="invoice_amount" precision="15"/>
+        </property>
+        <property name="invoiceNbr" type="string">
+            <column name="invoice_nbr"/>
+        </property>
+        <property name="invoiceCurrency" type="string">
+            <column name="invoice_currency"/>
+        </property>
+        <property name="natureOfCargo" type="string">
+            <column name="nature_of_cargo"/>
+        </property>
+        <property name="codAmount" type="float">
+            <column name="cod_amount" precision="15"/>
+        </property>
+        <property name="codCurrency" type="string">
+            <column name="cod_currency"/>
+        </property>
+        <property name="codAccount" type="string">
+            <column name="cod_account"/>
+        </property>
+        <property name="bookingText" type="string">
+            <column name="Booking_text"/>
+        </property>
+        <property name="pickupDate" type="date">
+            <column name="pickup_date" length="10"/>
+        </property>
+        <property name="pickupTime" type="time">
+            <column name="pickup_time" length="8"/>
+        </property>
+        <property name="pickupTimeTo" type="time">
+            <column name="pickup_time_to" length="8"/>
+        </property>
+        <property name="pickupTimeZone" type="string">
+            <column name="pickup_time_zone" length="25"/>
+        </property>
+        <property name="deliveryDate" type="date">
+            <column name="delivery_date" length="10"/>
+        </property>
+        <property name="deliveryTime" type="time">
+            <column name="delivery_time" length="8"/>
+        </property>
+        <property name="deliveryTimeTo" type="time">
+            <column name="delivery_time_to" length="8"/>
+        </property>
+        <property name="deliveryTimeZone" type="string">
+            <column name="delivery_time_zone" length="25"/>
+        </property>
+        <property name="orderDate" type="date">
+            <column name="order_date" length="10"/>
+        </property>
+        <property name="orderTime" type="time">
+            <column name="order_time" length="8"/>
+        </property>
+        <property name="orderTimeZone" type="string">
+            <column name="order_time_zone" length="25"/>
+        </property>
+        <property name="statisticalValue" type="float">
+            <column name="statistical_value" precision="15"/>
+        </property>
+        <property name="creationDate" type="date">
+            <column name="creation_date" length="10"/>
+        </property>
+        <property name="creationTime" type="time">
+            <column name="creation_time" length="8"/>
+        </property>
+        <property name="creationTimeZone" type="string">
+            <column name="creation_time_zone" length="25"/>
+        </property>
+        <property name="orderEntryDepot" type="string">
+            <column name="order_entry_depot"/>
+        </property>
+        <property name="servingDepot" type="string">
+            <column name="serving_depot"/>
+        </property>
+        <property name="handlingCode" type="string">
+            <column name="handling_code"/>
+        </property>
+        <property name="fclLcl" type="string">
+            <column name="fcl_lcl" length="3"/>
+        </property>
+    </class>
+</hibernate-mapping>

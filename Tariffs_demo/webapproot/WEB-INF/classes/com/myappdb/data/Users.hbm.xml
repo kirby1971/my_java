@@ -1,0 +1,18 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.myappdb.data.Users" table="users" catalog="myappdb" dynamic-insert="false" dynamic-update="false">
+        <id name="userId" type="string">
+            <column name="user_id" length="25"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="userName" type="string">
+            <column name="user_name" length="25"/>
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="25"/>
+        </property>
+        <property name="role" type="string">
+            <column name="role" length="25"/>
+        </property>
+    </class>
+</hibernate-mapping>

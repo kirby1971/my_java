@@ -1,0 +1,44 @@
+
+/* GROUP: Dialog Footer */
+.myown_1 .dialogfooter,
+.myown_1 .wmpagedialog-controlspanel {
+    background-color: #444444;
+    background-image: none;
+    filter: none;
+}
+
+/* GROUP: Dialog Footer Buttons */
+.myown_1 .dialogfooter .wmbutton {
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #FFFFFF; 
+    font-weight: bold;
+    background-color: #444444;
+    background-image: none;
+    filter: none;
+    box-shadow: 4px 4px 4px black;
+    border-radius: 4px;
+}
+
+/* GROUP: Footer Buttons (Hover) */
+.myown_1 .dialogfooter .wmbutton:hover {
+    color: #FFFFFF; 
+    background-color: #444444;
+    background-image: none;
+    filter: none;
+    box-shadow: 4px 4px 4px black;
+}
+
+/* GROUP: Footer Buttons (Active) */
+.myown_1 .dialogfooter button.wmbutton.toggleButtonDown,
+.myown_1 .dialogfooter .wmbutton.Active,
+.myown_1 .dialogfooter .wmbutton:active,
+.myown_1 .dialogfooter .wmbutton.Active:hover,
+.myown_1 .dialogfooter .wmbutton:active:hover {
+    color: #FFFFFF; 
+    background-color: #444444;
+    background-image: none;
+    filter: none;
+    box-shadow: 4px 4px 4px black;
+}
+

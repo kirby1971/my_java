@@ -1,0 +1,57 @@
+
+/* GROUP: Accordion Header */
+.myown_1 .wmaccordion div.wmaccordion-header {
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #444444;
+  background-image: none;
+  filter: none;
+  border-radius: 4px;
+}
+
+/* GROUP: Closed Header */
+.myown_1 .wmaccordion div.wmaccordion-header.wmaccordion-collapsed {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #555555; /* Document-ClickablesDefault-Background_Color */
+  background-image: none;
+  filter: none;
+}
+
+/* GROUP: Header Hover */
+.myown_1 div.wmaccordion .wmaccordion-header.wmaccordion-collapsed:hover {
+  color: #FFFFFF;
+  background-color: #666666;
+  background-image: none;
+  filter: none;
+}
+
+
+
+/* GROUP: Accordion Arrow (Selected) */
+.myown_1 .wmaccordion .accordionArrowNode {
+   float: none !important; /* THEMER: HIDE */
+   position: absolute; /* THEMER: HIDE */
+   right: 5px;
+   background-image: url(images/comboArrowDownDark.png);
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+}
+.myown_1 .wmaccordion .accordionArrowNode.accordionOnLeftArrowNode {
+     position: relative; /* THEMER: HIDE */
+     float: none; /* THEMER: HIDE */
+}
+
+/* GROUP: Accordion Arrow (Closed) */
+.myown_1 .wmaccordion .wmaccordion-collapsed .accordionArrowNode {
+   background-image: url(images/arrowRightDark.png); 
+}
+
+
+/* GROUP: Layer Styling */
+.myown_1 .wmaccordion .wmlayer.wmaccordion-content {
+    border-radius: 2px;
+    background-color: transparent;
+}

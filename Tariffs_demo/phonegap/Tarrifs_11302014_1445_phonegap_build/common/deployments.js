@@ -1,0 +1,52 @@
+{
+	"projectDeployments": {
+		"test_tarrifs": [],
+		"MyApplication_1": [],
+		"Tariffs2": [],
+		"test": [],
+		"WaveyWeb": [{
+			"applicationName": "WaveyWeb",
+			"archiveType": "WAR",
+			"databases": [],
+			"deploymentId": "WaveyWeb0",
+			"deploymentType": "TOMCAT",
+			"deploymentUrl": null,
+			"destroyAllData": null,
+			"host": "localhost",
+			"httpPort": 0,
+			"httpsPort": 0,
+			"name": "Tomcat 1",
+			"password": "7b6a43524a24291762623a21080c6812",
+			"port": 8094,
+			"target": null,
+			"token": null,
+			"username": "admin"
+		}, {
+			"applicationName": "WaveyWeb2",
+			"archiveType": "WAR",
+			"databases": [],
+			"deploymentId": "WaveyWeb1",
+			"deploymentType": "TOMCAT",
+			"deploymentUrl": null,
+			"destroyAllData": null,
+			"host": "localhost",
+			"httpPort": 0,
+			"httpsPort": 0,
+			"name": "Tomcat 2",
+			"password": "7b6a43524a282c146a6b626e425c32205754",
+			"port": 8094,
+			"target": null,
+			"token": null,
+			"username": "manager"
+		}],
+		"Project_test1": [],
+		"menu_on_side_2": [],
+		"Menu_on_top": [],
+		"Project": [],
+		"Menu_on_site": [],
+		"Project2": [],
+		"Maintenance_myapp1": [],
+		"maintenance_myapp": [],
+		"Project1": []
+	}
+}

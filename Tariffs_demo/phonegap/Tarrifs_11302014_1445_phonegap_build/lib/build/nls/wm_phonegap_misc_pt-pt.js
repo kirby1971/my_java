@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.wm_phonegap_misc_pt-pt");dojo.provide("dijit.form.nls.validate");dijit.form.nls.validate._built=true;dojo.provide("dijit.form.nls.validate.pt_pt");dijit.form.nls.validate.pt_pt={"rangeMessage":"Este valor encontra-se fora do intervalo.","invalidMessage":"O valor introduzido não é válido.","missingMessage":"Este valor é requerido."};

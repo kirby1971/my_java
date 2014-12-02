@@ -1,0 +1,13 @@
+{
+	"methods": [{
+		"name": "getRolesById",
+		"operationType": "hqlquery",
+		"parameters": [{
+			"name": "id",
+			"type": "java.lang.String"
+		}],
+		"returnType": "com.myappdb.data.Roles"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "myappdb.json"
+}

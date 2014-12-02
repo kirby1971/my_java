@@ -1,0 +1,97 @@
+/* GROUP: Calendar Cells */
+.myown_1 .dijitCalendarDayLabel,
+.myown_1 .dijitCalendarDateLabel {
+		font-size: 12px;
+}
+
+.myown_1 table.dijitCalendarContainer td.dijitCalendarCurrentMonth {
+		background-color: #f8f8f8 !important;
+		background-image: none !important;
+		filter: none !important;
+		color: #030000;
+}
+
+.myown_1 .dijitCalendarBodyContainer td {
+		border-top: solid 1px #ccc;
+		border-right: solid 1px #ccc;
+		border-bottom: solid 0px rgb(102, 102, 102);
+		border-left: solid 0px rgb(102, 102, 102);
+}
+
+/* GROUP: Selected Cell */
+.myown_1 .dijitCalendarContainer td.dijitCalendarSelectedDate,
+.myown_1 .dijitCalendarContainer td.dijitCalendarSelectedDate.dijitCalendarCurrentMonth {
+		background-image: -webkit-gradient(linear, center top, center bottom, from(#b8b8bf), color-stop(46%,#161616), to(#161616)) !important;
+		background-image: -moz-linear-gradient(top, #b8b8bf 0%,#161616 46%,#161616 100%) !important;
+		background-image: -o-linear-gradient(top, #b8b8bf 0%,#161616 46%,#161616 100%) !important;
+		background-image: -ms-linear-gradient(top, #b8b8bf 0%,#161616 46%,#161616 100%) !important;
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8b8bf', endColorstr='#161616',GradientType=0) !important;
+		color: #e2e2d4 !important;
+}
+
+/* GROUP: Hover Cell */
+.myown_1 .dijitCalendarContainer td.dijitCalendarHoveredDate,
+.myown_1 .dijitCalendarContainer td.dijitCalendarHoveredDate.dijitCalendarCurrentMonth,
+.myown_1 .dijitCalendarContainer .dijitCalendarHoveredYear,
+.myown_1 .dijitCalendarContainer .dijitCalendarNextYear:hover,
+.myown_1 .dijitCalendarContainer .dijitCalendarPreviousYear:hover {
+		background-color: #908a8a !important;
+		background-image: none !important;
+		filter: none !important;
+		color: #ebebe2;
+}
+
+
+/* GROUP: Dates Not In Month */
+.myown_1 .dijitCalendarContainer .dijitCalendarPreviousMonth,
+.myown_1 .dijitCalendarContainer .dijitCalendarNextMonth {
+		background-color: #655f5f !important;
+		background-image: none !important;
+		filter: none !important;
+		color: #bab0b0;
+}
+
+/* GROUP: Column Headings */
+.myown_1 .dijitCalendarContainer .dijitCalendarDayLabelTemplate {
+		background-color: #655f5f !important;
+		background-image: none !important;
+		filter: none !important;
+		color: #bab0b0;
+}
+
+/* GROUP: Header */
+.myown_1 tr.dijitCalendarMonthContainer th {    
+		background-color: #444444;
+		background-image: -webkit-gradient(linear, center top, center bottom, from(#aaa), color-stop(34%,#444), to(#444));
+		background-image: -moz-linear-gradient(top, #aaa 0%,#444 34%,#444 100%);
+		background-image: -o-linear-gradient(top, #aaa 0%,#444 34%,#444 100%);
+		background-image: -ms-linear-gradient(top, #aaa 0%,#444 34%,#444 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaa', endColorstr='#444',GradientType=0);
+}
+
+/* GROUP: Month Container */
+.myown_1 tr.dijitCalendarMonthContainer th {
+    font-family: sans-serif; 
+    font-size: 10px;
+    color: #f3e6e6;
+    font-weight: bold;
+}
+
+/* GROUP: Month Label */
+.myown_1 tr.dijitCalendarMonthContainer th .dijitCalendarMonthLabel {
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #FFFFFF; 
+    font-weight: bold;
+    border: solid 0px rgb(251, 251, 251); /* THEMER: HIDE */
+    box-shadow: 0px 0px 0px black; /* THEMER: HIDE */
+}
+
+/* GROUP: Outer Widget */
+.myown_1 table.dijitCalendarContainer {
+		border: solid 2px rgb(102, 102, 102);
+
+		border-radius: 4px;
+		-webkit-border-radius: 4px;
+}
+

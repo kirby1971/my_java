@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.myproddb.data.HandlingCodes" table="handling_codes" catalog="myproddb" dynamic-insert="false" dynamic-update="false">
+        <id name="handlingCode" type="string">
+            <column name="handling_code" length="5"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="description" type="string">
+            <column name="description" length="50"/>
+        </property>
+        <property name="handlingType" type="string">
+            <column name="handling_type" length="5"/>
+        </property>
+    </class>
+</hibernate-mapping>

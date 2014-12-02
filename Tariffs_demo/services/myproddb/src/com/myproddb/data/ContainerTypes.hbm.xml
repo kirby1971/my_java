@@ -1,0 +1,42 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.myproddb.data.ContainerTypes" table="container_types" catalog="myproddb" dynamic-insert="false" dynamic-update="false">
+        <id name="containerType" type="string">
+            <column name="container_type" length="5"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="description" type="string">
+            <column name="description" length="50"/>
+        </property>
+        <property name="insideLength" type="float">
+            <column name="Inside_length" precision="15"/>
+        </property>
+        <property name="insideWidth" type="float">
+            <column name="Inside_width" precision="15"/>
+        </property>
+        <property name="insideHeight" type="float">
+            <column name="Inside_height" precision="15"/>
+        </property>
+        <property name="doorWidth" type="float">
+            <column name="Door_width" precision="15"/>
+        </property>
+        <property name="doorHeight" type="float">
+            <column name="Door_height" precision="15"/>
+        </property>
+        <property name="capacity" type="float">
+            <column name="Capacity" precision="15"/>
+        </property>
+        <property name="tareWeight" type="float">
+            <column name="Tare_weight" precision="15"/>
+        </property>
+        <property name="maxCargoWeight" type="float">
+            <column name="Max_cargo_weight" precision="15"/>
+        </property>
+        <set name="usertariffss" inverse="true" cascade="">
+            <key>
+                <column name="container_type2" not-null="true"/>
+            </key>
+            <one-to-many class="com.myproddb.data.UserTariffs"/>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.myproddb.data.BookingLinks" table="booking_links" catalog="myproddb" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.myproddb.data.BookingLinksId">
+            <key-property name="userId" type="string">
+                <column name="user_id" length="25"/>
+            </key-property>
+            <key-property name="tariffSeq" type="integer">
+                <column name="tariff_seq"/>
+            </key-property>
+            <key-property name="dataTime" type="date">
+                <column name="data_time" length="10"/>
+            </key-property>
+            <key-property name="portOfLoading" type="string">
+                <column name="port_of_loading" length="30"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

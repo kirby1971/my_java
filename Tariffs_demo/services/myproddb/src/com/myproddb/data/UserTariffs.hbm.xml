@@ -1,0 +1,100 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.myproddb.data.UserTariffs" table="user_tariffs" catalog="myproddb" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.myproddb.data.UserTariffsId">
+            <key-property name="userId" type="string">
+                <column name="user_id" length="25"/>
+            </key-property>
+            <key-property name="tariffSeq" type="integer">
+                <column name="tariff_seq"/>
+            </key-property>
+            <key-property name="dataTime" type="date">
+                <column name="data_time" length="10"/>
+            </key-property>
+        </composite-id>
+        <property name="portOfLoading" type="string">
+            <column name="port_of_loading" length="30"/>
+        </property>
+        <property name="freightRateWm" type="float">
+            <column name="Freight_rate_wm" precision="15"/>
+        </property>
+        <property name="volume" type="float">
+            <column name="volume" precision="15"/>
+        </property>
+        <property name="expectedPallets" type="integer">
+            <column name="expected_pallets"/>
+        </property>
+        <property name="exchangeRate" type="float">
+            <column name="exchange_rate" precision="15"/>
+        </property>
+        <property name="deliveryLocationNl" type="string">
+            <column name="delivery_location_nl" length="30"/>
+        </property>
+        <property name="oceanfreightAmount" type="float">
+            <column name="oceanfreight_amount" precision="15"/>
+        </property>
+        <property name="cfsChargesDest" type="float">
+            <column name="cfs_charges_dest" precision="15"/>
+        </property>
+        <property name="delOrderFee" type="float">
+            <column name="del_order_fee" precision="15"/>
+        </property>
+        <property name="customsValue" type="float">
+            <column name="customs_value" precision="15"/>
+        </property>
+        <property name="transportDestCosts" type="float">
+            <column name="Transport_dest_costs" precision="15"/>
+        </property>
+        <property name="dieselSurcharge" type="float">
+            <column name="diesel_surcharge" precision="15"/>
+        </property>
+        <property name="handlingFeeLcl" type="float">
+            <column name="handling_fee_lcl" precision="15"/>
+        </property>
+        <property name="fclLcl" type="string">
+            <column name="fcl_lcl" length="3"/>
+        </property>
+        <property name="containerType" type="string">
+            <column name="container_type" length="5"/>
+        </property>
+        <property name="distance" type="integer">
+            <column name="distance"/>
+        </property>
+        <property name="range" type="integer">
+            <column name="range"/>
+        </property>
+        <property name="deltaEuromax" type="string">
+            <column name="delta_euromax" length="25"/>
+        </property>
+        <property name="thcChargesCarrier" type="float">
+            <column name="thc_charges_carrier" precision="15"/>
+        </property>
+        <property name="isps" type="float">
+            <column name="isps" precision="15"/>
+        </property>
+        <property name="deliveryOrderFee" type="float">
+            <column name="delivery_order_fee" precision="15"/>
+        </property>
+        <property name="containertransportToDestination" type="float">
+            <column name="containertransport_to_destination" precision="15"/>
+        </property>
+        <property name="deltaEuromaxSurcharge" type="float">
+            <column name="`delta_Euromax surcharge`" precision="15"/>
+        </property>
+        <property name="allInHandlingFee" type="float">
+            <column name="all_in_handling_fee" precision="15"/>
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="25"/>
+        </property>
+        <many-to-one name="rel_port_of_loading" class="com.myproddb.data.PortCodes" cascade="none">
+            <column name="port_of_loading2" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="rel_container_type" class="com.myproddb.data.ContainerTypes" cascade="none">
+            <column name="container_type2" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="rel_delivery_location_nl" class="com.myproddb.data.Locations" cascade="none">
+            <column name="delivery_location_nl2" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+
+<!-- Generated 11/28/2014 23:40:54
+
+Configuration for 'myappdb' database service
+
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+
+    <bean 
+        id="myappdb"
+        class="com.myappdb.Myappdb"
+        scope="singleton"
+        lazy-init="true">
+        <property name="dataServiceManager">
+            <ref bean="myappdbDataService"/>
+        </property>
+        <property name="taskManager">
+            <ref bean="myappdbTaskMgr"/>
+        </property>
+    </bean>
+
+
+    <bean 
+        class="com.wavemaker.runtime.data.spring.WMPropertyPlaceholderConfigurer">
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+        <property name="locations">
+            <list>
+                <value>classpath:myappdb.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean 
+        id="myappdbDataSource"
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource" 
+        lazy-init="true">
+        <property name="driverClassName" value="${myappdb.driverClassName}"/>
+        <property name="url" value="${myappdb.connectionUrl}"/>
+        <property name="username" value="${myappdb.username}"/>
+        <property name="password" value="${myappdb.password}"/>
+    </bean>
+
+
+    <bean 
+        id="myappdbTxMgr" 
+        class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+        lazy-init="true">
+        <property name="sessionFactory">
+            <ref bean="myappdbSessionFactory"/>
+        </property>
+    </bean>
+
+
+    <bean 
+        id="myappdbHibernateTemplate"
+        class="org.springframework.orm.hibernate3.HibernateTemplate"
+        lazy-init="true">
+        <property name="sessionFactory"> 
+            <ref bean="myappdbSessionFactory"/>
+        </property>
+    </bean>  
+
+
+    <bean 
+        id="myappdbSessionFactory" 
+        class="com.wavemaker.runtime.data.spring.ConfigurationAndSessionFactoryBean"
+        lazy-init="true">
+
+        <!-- A unique name for this SessionFactory's configuration -->
+        <property name="name" value="myappdb"/>
+        <property name="dataSource" ref="myappdbDataSource"/>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${myappdb.dialect}</prop>
+                <prop key="hibernate.transaction.factory_class">
+                    org.hibernate.transaction.JDBCTransactionFactory
+                </prop>
+                <prop key="hibernate.current_session_context_class">thread</prop>
+                
+            </props> 
+        </property>
+
+        <property name="mappingResources">
+            <list>
+
+<value>com/myappdb/data/Roles.hbm.xml</value>
+<value>com/myappdb/data/Membership.hbm.xml</value>
+<value>com/myappdb/data/Users.hbm.xml</value>
+
+<value>com/myappdb/data/Roles.ql.xml</value>
+<value>com/myappdb/data/app-queries.ql.xml</value>
+
+            </list>
+        </property>
+
+    </bean>
+
+
+    <!-- the data service bean instance is injected into the service bean -->
+    <bean 
+        id="myappdbDataService" 
+        class="com.wavemaker.runtime.data.spring.SpringDataServiceManager"
+        lazy-init="true">
+        <constructor-arg>
+            <!-- the value of the "name" property of the SessionFactory -->
+            <value>myappdb</value>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="myappdbHibernateTemplate"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="myappdbTxMgr"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="myappdbTaskMgr"/>
+        </constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="useIndividualCRUDOperations" value="false"/>
+                <entry key="refreshEntities" value=""/> 
+            </map>
+        </constructor-arg>
+    </bean>
+
+
+    <bean 
+        id="myappdbTaskMgr"
+        class="com.wavemaker.runtime.data.DefaultTaskManager"
+        lazy-init="true"/>
+
+    <bean class="com.wavemaker.runtime.service.events.EventWire"
+        lazy-init="false">
+        <property name="serviceWire" ref="myappdbServiceWire"/>
+        <property name="eventListener">
+            <bean class="com.wavemaker.runtime.data.DataServiceEventListener"/>
+        </property>
+    </bean>
+
+    <bean id="myappdbServiceWire"
+        class="com.wavemaker.runtime.service.reflect.ReflectServiceWire"
+        lazy-init="false" scope="singleton">
+        <property name="serviceId" value="myappdb"/>
+        <property name="serviceType" ref="DataService"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,58 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.myproddb.data.Parties" table="parties" catalog="myproddb" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.myproddb.data.PartiesId">
+            <key-property name="bookingId" type="string">
+                <column name="Booking_id" length="50"/>
+            </key-property>
+            <key-property name="accountId" type="string">
+                <column name="account_id" length="50"/>
+            </key-property>
+            <key-property name="partyType" type="string">
+                <column name="party_type"/>
+            </key-property>
+        </composite-id>
+        <property name="addressName" type="string">
+            <column name="address_name"/>
+        </property>
+        <property name="addressName2" type="string">
+            <column name="address_name2"/>
+        </property>
+        <property name="addressAddress" type="string">
+            <column name="address_address"/>
+        </property>
+        <property name="addressAddress2" type="string">
+            <column name="address_address2"/>
+        </property>
+        <property name="addressAddress3" type="string">
+            <column name="address_address3"/>
+        </property>
+        <property name="addressCity" type="string">
+            <column name="address_city"/>
+        </property>
+        <property name="addressPostalCode" type="string">
+            <column name="address_postal_code"/>
+        </property>
+        <property name="addressCountryCode" type="string">
+            <column name="address_country_code"/>
+        </property>
+        <property name="addressForeignAccountNumber" type="string">
+            <column name="address_foreign_account_number"/>
+        </property>
+        <property name="addressContactPerson" type="string">
+            <column name="address_contact_person"/>
+        </property>
+        <property name="addressState" type="string">
+            <column name="address_state"/>
+        </property>
+        <property name="addressPhone" type="string">
+            <column name="address_phone"/>
+        </property>
+        <property name="addressEmailAddress" type="string">
+            <column name="address_email_address"/>
+        </property>
+        <property name="addressReference" type="string">
+            <column name="address_reference"/>
+        </property>
+    </class>
+</hibernate-mapping>
