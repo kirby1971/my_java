@@ -1,0 +1,215 @@
+{
+	"xhrpaths": [
+		"http://149.210.146.185:8094/phonegaptest", 
+		"http://phonegaptest.cloudfoundry.com"
+	], 
+	"appName": "phonegaptest", 
+	"appId": "com.mycompany.phonegaptest", 
+	"appVersion": "1.", 
+	"xhrPath": "http://149.210.146.185:8094/phonegaptest", 
+	"iosIconListVar": [
+		{
+			"imageId": 1, 
+			"src": "resources/images/logos/IOS/wavemaker_57x57.png", 
+			"imageType": "Icon", 
+			"width": 57, 
+			"height": 57, 
+			"description": "iPhone Classic", 
+			"template": "<icon src=\"${src}\" width=\"${width}\" height=\"${height}\" />"
+		}, 
+		{
+			"imageId": 2, 
+			"src": "resources/images/logos/IOS/wavemaker_72x72.png", 
+			"imageType": "Icon", 
+			"width": 72, 
+			"height": 72, 
+			"description": "iPhone Retina", 
+			"template": "<icon gap:platform=\"ios\" src=\"${src}\" width=\"${width}\" height=\"${height}\" />"
+		}, 
+		{
+			"imageId": 3, 
+			"src": "resources/images/logos/IOS/wavemaker_114x114.png", 
+			"imageType": "Icon", 
+			"width": 114, 
+			"height": 114, 
+			"description": "iPad", 
+			"template": "<icon src=\"${src}\" width=\"${width}\" height=\"${height}\" />"
+		}, 
+		{
+			"imageId": 4, 
+			"src": "resources/images/logos/IOS/wavemaker_144x144.png", 
+			"imageType": "Icon", 
+			"width": 144, 
+			"height": 144, 
+			"description": "iPad Retina", 
+			"template": "<icon src=\"${src}\" width=\"${width}\" height=\"${height}\" />"
+		}, 
+		{
+			"imageId": 5, 
+			"src": "resources/images/logos/IOS/wavemaker_320x480.png", 
+			"imageType": "Splash Screen", 
+			"width": 320, 
+			"height": 480, 
+			"description": "IPhone Classic", 
+			"template": "<gap:splash src=\"${src}\" width=\"${width}\" height=\"${height}\" />\n\t<gap:splash src=\"${src}\"  gap:platform=\"blackberry\" />\n\t<gap:splash src=\"${src}\" gap:platform=\"winphone\" />"
+		}, 
+		{
+			"imageId": 6, 
+			"src": "resources/images/logos/IOS/wavemaker_640x960.png", 
+			"imageType": "Splash Screen", 
+			"width": 640, 
+			"height": 960, 
+			"description": "iPhone Retina", 
+			"template": "<gap:splash src=\"${src}\" width=\"${width}\" height=\"${height}\" />"
+		}, 
+		{
+			"imageId": 7, 
+			"src": "resources/images/logos/IOS/wavemaker_768x1004.png", 
+			"imageType": "Splash Screen", 
+			"width": 768, 
+			"height": 1004, 
+			"description": "iPad Portrait", 
+			"template": "<gap:splash src=\"${src}\" width=\"${width}\" height=\"${height}\" />"
+		}, 
+		{
+			"imageId": 8, 
+			"src": "resources/images/logos/IOS/wavemaker_1024x748.png", 
+			"imageType": "Splash Screen", 
+			"width": 1024, 
+			"height": 748, 
+			"description": "iPad Landscape", 
+			"template": "<gap:splash src=\"${src}\" width=\"${width}\" height=\"${height}\" />"
+		}, 
+		{
+			"imageId": 9, 
+			"src": "resources/images/logos/IOS/wavemaker_1536x2008.png", 
+			"imageType": "Splash Screen", 
+			"width": 1536, 
+			"height": 2008, 
+			"description": "iPad Retina Portrait", 
+			"template": "<gap:splash src=\"${src}\" width=\"${width}\" height=\"${height}\" />"
+		}, 
+		{
+			"imageId": 10, 
+			"src": "resources/images/logos/IOS/wavemaker_2048x1496.png", 
+			"imageType": "Splash Screen", 
+			"width": 2048, 
+			"height": 1496, 
+			"description": "iPad Retina Landscape", 
+			"template": "<gap:splash src=\"${src}\" width=\"${width}\" height=\"${height}\" />"
+		}
+	], 
+	"androidIconListVar": [
+		{
+			"imageId": 1, 
+			"src": "resources/images/logos/Android/wavemaker_36x36.png", 
+			"imageType": "Icon", 
+			"width": 36, 
+			"height": 36, 
+			"description": "Low Density Screen", 
+			"template": "<icon src=\"${src}\"  gap:platform=\"android\" gap:density=\"ldpi\"  />"
+		}, 
+		{
+			"imageId": 2, 
+			"src": "resources/images/logos/Android/wavemaker_48x48.png", 
+			"imageType": "Icon", 
+			"width": 48, 
+			"height": 48, 
+			"description": "Medium Density Screen", 
+			"template": "<icon src=\"${src}\"  gap:platform=\"android\" gap:density=\"mdpi\"  />"
+		}, 
+		{
+			"imageId": 3, 
+			"src": "resources/images/logos/Android/wavemaker_72x72.png", 
+			"imageType": "Icon", 
+			"width": 72, 
+			"height": 72, 
+			"description": "High Density Screen", 
+			"template": "<icon src=\"${src}\"  gap:platform=\"android\" gap:density=\"hdpi\"  />"
+		}, 
+		{
+			"imageId": 4, 
+			"src": "resources/images/logos/Android/wavemaker_96x96.png", 
+			"imageType": "Icon", 
+			"width": 96, 
+			"height": 96, 
+			"description": "Extra High Density Screen", 
+			"template": "<icon src=\"${src}\"  gap:platform=\"android\" gap:density=\"xhdpi\"  />"
+		}, 
+		{
+			"imageId": 5, 
+			"src": "resources/images/logos/Android/wavemaker_320x480.png", 
+			"imageType": "Splash Screen", 
+			"width": 320, 
+			"height": 480, 
+			"description": "Low Density Screen", 
+			"template": "<gap:splash src=\"${src}\"  gap:platform=\"android\" gap:density=\"ldpi\"  />"
+		}, 
+		{
+			"imageId": 6, 
+			"src": "resources/images/logos/Android/wavemaker_640x960.png", 
+			"imageType": "Splash Screen", 
+			"width": 640, 
+			"height": 960, 
+			"description": "Medium Density Screen", 
+			"template": "<gap:splash src=\"${src}\"  gap:platform=\"android\" gap:density=\"mdpi\"  />"
+		}, 
+		{
+			"imageId": 7, 
+			"src": "resources/images/logos/Android/wavemaker_768x1024.png", 
+			"imageType": "Splash Screen", 
+			"width": 768, 
+			"height": 1024, 
+			"description": "High Density Screen", 
+			"template": "<gap:splash src=\"${src}\"  gap:platform=\"android\" gap:density=\"hdpi\"  />"
+		}, 
+		{
+			"imageId": 8, 
+			"src": "resources/images/logos/Android/wavemaker_1024x1364.png", 
+			"imageType": "Splash Screen", 
+			"width": 1024, 
+			"height": 1364, 
+			"description": "Extra High Density Screen", 
+			"template": "<gap:splash src=\"${src}\"  gap:platform=\"android\" gap:density=\"xhdpi\"  />"
+		}
+	], 
+	"otherIconListVar": [
+		{
+			"imageId": 1, 
+			"src": "resources/images/logos/Other/wavemaker_62x62.png", 
+			"imageType": "Icon", 
+			"width": 62, 
+			"height": 62, 
+			"description": "Windows Mobile", 
+			"template": "<icon gap:platform=\"winphone\" src=\"${src}\" />\n\t<icon gap:platform=\"winphone\" src=\"${src}\" gap:role=\"background\" />"
+		}, 
+		{
+			"imageId": 2, 
+			"src": "resources/images/logos/Other/wavemaker_64x64.png", 
+			"imageType": "Icon", 
+			"width": 64, 
+			"height": 64, 
+			"description": "WebOS", 
+			"template": "<icon src=\"${src}\" width=\"${width}\" height=\"${height}\" />"
+		}
+	], 
+	"features": [
+		"http://api.phonegap.com/1.0/network", 
+		"http://api.phonegap.com/1.0/notification", 
+		"http://api.phonegap.com/1.0/geolocation", 
+		"http://api.phonegap.com/1.0/camera", 
+		"http://api.phonegap.com/1.0/contacts", 
+		"http://api.phonegap.com/1.0/file", 
+		"http://api.phonegap.com/1.0/media", 
+		"http://api.phonegap.com/1.0/battery"
+	], 
+	"appDescription": "", 
+	"appAuthorUrl": "", 
+	"appAuthorEmail": "", 
+	"appAuthorName": "A WaveMaker Studio User", 
+	"appOrientation": "default", 
+	"appFullscreen": false, 
+	"iosPrerenderedIcon": false, 
+	"iosStatusBarStyle": "default", 
+	"xhrServiceProxies": false
+}

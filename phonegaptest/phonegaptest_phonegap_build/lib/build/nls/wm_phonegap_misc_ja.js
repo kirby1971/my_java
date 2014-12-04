@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.wm_phonegap_misc_ja");dojo.provide("dijit.form.nls.validate");dijit.form.nls.validate._built=true;dojo.provide("dijit.form.nls.validate.ja");dijit.form.nls.validate.ja={"rangeMessage":"この値は範囲外です。","invalidMessage":"入力した値は無効です。","missingMessage":"この値は必須です。"};

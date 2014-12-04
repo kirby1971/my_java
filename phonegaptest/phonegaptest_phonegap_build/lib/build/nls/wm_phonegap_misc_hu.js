@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.wm_phonegap_misc_hu");dojo.provide("dijit.form.nls.validate");dijit.form.nls.validate._built=true;dojo.provide("dijit.form.nls.validate.hu");dijit.form.nls.validate.hu={"rangeMessage":"Az érték kívül van a megengedett tartományon.","invalidMessage":"A megadott érték érvénytelen.","missingMessage":"Meg kell adni egy értéket."};

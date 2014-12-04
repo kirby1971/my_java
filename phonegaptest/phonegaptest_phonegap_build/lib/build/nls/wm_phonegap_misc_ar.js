@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.wm_phonegap_misc_ar");dojo.provide("dijit.form.nls.validate");dijit.form.nls.validate._built=true;dojo.provide("dijit.form.nls.validate.ar");dijit.form.nls.validate.ar={"rangeMessage":"هذه القيمة ليس بالمدى الصحيح.","invalidMessage":"القيمة التي تم ادخالها غير صحيحة.","missingMessage":"يجب ادخال هذه القيمة."};

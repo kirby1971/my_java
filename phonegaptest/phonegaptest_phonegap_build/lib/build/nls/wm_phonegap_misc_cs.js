@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.wm_phonegap_misc_cs");dojo.provide("dijit.form.nls.validate");dijit.form.nls.validate._built=true;dojo.provide("dijit.form.nls.validate.cs");dijit.form.nls.validate.cs={"rangeMessage":"Tato hodnota je mimo rozsah.","invalidMessage":"Zadaná hodnota není platná.","missingMessage":"Tato hodnota je vyžadována."};

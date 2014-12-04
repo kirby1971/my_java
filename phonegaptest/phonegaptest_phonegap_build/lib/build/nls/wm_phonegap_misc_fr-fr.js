@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.wm_phonegap_misc_fr-fr");dojo.provide("dijit.form.nls.validate");dijit.form.nls.validate._built=true;dojo.provide("dijit.form.nls.validate.fr_fr");dijit.form.nls.validate.fr_fr={"rangeMessage":"Cette valeur n'est pas comprise dans la plage autorisée.","invalidMessage":"La valeur indiquée n'est pas correcte.","missingMessage":"Cette valeur est requise."};
